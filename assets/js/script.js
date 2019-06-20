@@ -1,7 +1,7 @@
 let btnArray = ['Zelda', 'Mario', 'Pokemon', 'Banjo Kazooie', 'Donkey Kong', 'Pac-Man']
 
 const apiKey = '&api_key=vpDgs21nCK0VKHhMScTQrZxtF5DMTXpi';
-const url = 'http://api.giphy.com/v1/gifs/search?q=';
+const url = 'https://api.giphy.com/v1/gifs/search?q=';
 
 // HTML queries
 const $btns = $('#buttons');
