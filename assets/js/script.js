@@ -11,7 +11,7 @@ function initialize (array) {
     $gifs.empty();
     $btns.empty();
     array.forEach(e => {
-        btn = $('<button class="btn btn-danger col-md-2 col-5 m-2">');
+        let btn = $('<button class="btn btn-danger col-md-2 col-11 m-2">');
         btn.text(e);
         btn.attr('data-name', e);
         $btns.append(btn);
@@ -61,8 +61,6 @@ $gifs.on('click', 'img', function(){
 
 // play all/stop all buttons
 $('#play-all').on('click', function(){
-    event.preventDefault();
-
     let $gif = $('.gif');
     for (let i = 0; i < $gif.length; i++) {
         const element = $gif[i];
@@ -72,10 +70,8 @@ $('#play-all').on('click', function(){
         $(element).attr('src', animate);
         $(element).attr('data-state', 'animate');
     }
-})
+});
 $('#stop-all').on('click', function(){
-    event.preventDefault();
-
     let $gif = $('.gif');
     for (let i = 0; i < $gif.length; i++) {
         const element = $gif[i];
@@ -85,6 +81,18 @@ $('#stop-all').on('click', function(){
         $(element).attr('src', still);
         $(element).attr('data-state', 'still');
     }
-})
+});
+
+// clear all
+$('#clear-all').on('click', function(){
+    $gifs.empty();
+});
 
 // add new buttons
+$('#add-button').on('click', function(){
+    event.preventDefault();
+    let btn = $('<button class="btn btn-danger col-md-2 col-5 m-2">');
+    btn.text($('#search').val());
+    btn.attr('data-name', $('#search').val());
+    $btns.append(btn);
+});
