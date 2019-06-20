@@ -1,3 +1,16 @@
-/* img {
-    height: 100%;
-} */
+.controls {
+    position: fixed;
+    bottom: 10%;
+    left: 3em;
+}
+
+input {
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    .controls {
+        left: 0;
+        bottom: 0;
+    }    
+}
