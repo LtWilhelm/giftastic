@@ -91,7 +91,7 @@ $('#clear-all').on('click', function(){
 // add new buttons
 $('#add-button').on('click', function(){
     event.preventDefault();
-    let btn = $('<button class="btn btn-danger col-md-2 col-5 m-2">');
+    let btn = $('<button class="btn btn-danger col-md-2 col-11 m-2">');
     btn.text($('#search').val());
     btn.attr('data-name', $('#search').val());
     $btns.append(btn);
